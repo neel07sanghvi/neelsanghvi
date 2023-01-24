@@ -56,7 +56,7 @@ scene.add(light);
 
 stars = scene.children[0];
 const loader = new GLTFLoader();
-loader.load("./toy_rocket/scene.gltf", (gltf) => {
+loader.load("./public/toy_rocket/scene.gltf", (gltf) => {
   hotAirBallon = gltf.scene;
   hotAirBallon.position.y = spaceShipMax;
   hotAirBallon.scale.set(70, 70, 70);
