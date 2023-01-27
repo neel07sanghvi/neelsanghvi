@@ -27,9 +27,14 @@
   src: url("Dune_Rise.otf");
 }
 
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   height: 200vh;
   width: 100vw;
+  height: -webkit-fill-available;
 }
 
 #app {
@@ -46,6 +51,29 @@ body {
   position: fixed;
   left: 0;
   top: 0;
+}
+
+.progress-bar-container {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "DuneRise";
+  position: fixed;
+}
+
+#progress-bar {
+  width: 30%;
+  height: 2%;
+  margin-top: 0.5%;
+}
+
+label {
+  color: white;
 }
 
 .info {
