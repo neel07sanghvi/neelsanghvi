@@ -129,6 +129,7 @@ a {
   height: var(--profileHeight);
   width: var(--profileWidth);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .linkedIn > a > img {
@@ -144,6 +145,7 @@ a {
   height: var(--profileHeight);
   width: var(--profileWidth);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .gitHub > a > img {
@@ -159,6 +161,7 @@ a {
   height: var(--profileHeight);
   width: var(--profileWidth);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .codeChef > a > img {
@@ -174,6 +177,7 @@ a {
   height: var(--profileHeight);
   width: var(--profileWidth);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .leetCode > a > img {
@@ -198,30 +202,29 @@ a {
   border: var(--conatinerBorder);
   background-clip: padding-box;
   box-shadow: 10px 10px 10px var(--boxShadowColor);
-  font-family: "DuneRise";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.front {
-  position: absolute;
-  height: 100%;
+.titleProjects {
+  font-family: "DuneRise";
+  height: 30%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 1;
 }
 
-.back {
-  position: absolute;
-  height: 100%;
+.projectNames {
+  font-family: "Nunito";
+  height: 70%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  opacity: 0;
-  font-family: "Nunito";
-  font-size: large;
 }
 
 .exp {
@@ -292,7 +295,7 @@ a {
 .resume {
   height: 20%;
   padding: 5px;
-  /* width: 20%; */
+  overflow: hidden;
   background-color: var(--profileBackgroundColor);
   color: black;
   display: flex;
@@ -300,28 +303,6 @@ a {
   align-items: center;
   border-radius: var(--borderRadius);
   font-family: "Nunito";
-}
-
-@media only screen and (max-width: 1280px) {
-  .proj {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .front {
-    position: relative;
-    opacity: 1;
-    height: 20%;
-  }
-
-  .back {
-    position: relative;
-    opacity: 1;
-    justify-content: space-evenly;
-    height: 70%;
-  }
 }
 
 @media only screen and (max-width: 1200px) {

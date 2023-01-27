@@ -6,9 +6,9 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 const canvas = document.querySelector(".webgl");
 gsap.registerPlugin(ScrollTrigger);
 
-let hotAirBallon,
+let rocketGLTF,
   spaceShipMax = -75,
-  spaceShipMin = 50,
+  spaceShipMin = 52,
   spaceDuration = 7,
   rotationSpeed = 0.001,
   scene,
@@ -56,14 +56,14 @@ scene.add(light);
 
 stars = scene.children[0];
 const loader = new GLTFLoader();
-loader.load("./public/toy_rocket/scene.gltf", (gltf) => {
-  hotAirBallon = gltf.scene;
-  hotAirBallon.position.y = spaceShipMax;
-  hotAirBallon.scale.set(70, 70, 70);
-  scene.add(hotAirBallon);
+loader.load("./toy_rocket/scene.gltf", (gltf) => {
+  rocketGLTF = gltf.scene;
+  rocketGLTF.position.y = spaceShipMax;
+  rocketGLTF.scale.set(70, 70, 70);
+  scene.add(rocketGLTF);
 
   const t1 = gsap.timeline();
-  t1.to(hotAirBallon.position, {
+  t1.to(rocketGLTF.position, {
     scrollTrigger: {
       trigger: ".container2",
       start: "top bottom",
@@ -103,7 +103,7 @@ loader.load("./public/toy_rocket/scene.gltf", (gltf) => {
       opacity: 1,
       duration: spaceDuration,
     })
-    .to(hotAirBallon.rotation, {
+    .to(rocketGLTF.rotation, {
       scrollTrigger: {
         trigger: ".container2",
         start: "top bottom",
@@ -123,7 +123,7 @@ loader.load("./public/toy_rocket/scene.gltf", (gltf) => {
       opacity: 1,
       duration: spaceDuration,
     })
-    .to(hotAirBallon.rotation, {
+    .to(rocketGLTF.rotation, {
       scrollTrigger: {
         trigger: ".container2",
         start: "top 80%",
@@ -143,7 +143,7 @@ loader.load("./public/toy_rocket/scene.gltf", (gltf) => {
       opacity: 1,
       duration: spaceDuration,
     })
-    .to(hotAirBallon.rotation, {
+    .to(rocketGLTF.rotation, {
       scrollTrigger: {
         trigger: ".container2",
         start: "top 60%",
@@ -163,7 +163,7 @@ loader.load("./public/toy_rocket/scene.gltf", (gltf) => {
       opacity: 1,
       duration: spaceDuration,
     })
-    .to(hotAirBallon.rotation, {
+    .to(rocketGLTF.rotation, {
       scrollTrigger: {
         trigger: ".container2",
         start: "top 40%",
@@ -175,52 +175,11 @@ loader.load("./public/toy_rocket/scene.gltf", (gltf) => {
     });
 });
 
-if (window.innerWidth > 1280) {
-  const proj = document.querySelector(".proj");
-  proj.addEventListener("mouseenter", () => {
-    gsap.to(".front", {
-      opacity: 0,
-    });
-    gsap.to(".back", {
-      opacity: 1,
-    });
-  });
-
-  proj.addEventListener("mouseleave", () => {
-    gsap.to(".front", {
-      opacity: 1,
-    });
-    gsap.to(".back", {
-      opacity: 0,
-    });
-  });
-}
-
 window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  if (window.innerWidth > 1270) {
-    const proj = document.querySelector(".proj");
-    proj.addEventListener("mouseenter", () => {
-      gsap.to(".front", {
-        opacity: 0,
-      });
-      gsap.to(".back", {
-        opacity: 1,
-      });
-    });
-
-    proj.addEventListener("mouseleave", () => {
-      gsap.to(".front", {
-        opacity: 1,
-      });
-      gsap.to(".back", {
-        opacity: 0,
-      });
-    });
-  }
 });
 
 function animate() {
