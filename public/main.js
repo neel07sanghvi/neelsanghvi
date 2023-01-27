@@ -58,15 +58,15 @@ stars = scene.children[0];
 
 const loadingManager = new THREE.LoadingManager();
 
-const progressBar = document.querySelector("#progress-bar");
-loadingManager.onProgress = function (url, loaded, total) {
-  progressBar.value = (loaded / total) * 100;
-};
+// const progressBar = document.querySelector("#progress-bar");
+// loadingManager.onProgress = function (url, loaded, total) {
+//   progressBar.value = (loaded / total) * 100;
+// };
 
-const progressBarContainer = document.querySelector(".progress-bar-container");
-loadingManager.onLoad = function () {
-  progressBarContainer.style.display = "none";
-};
+// const progressBarContainer = document.querySelector(".progress-bar-container");
+// loadingManager.onLoad = function () {
+//   progressBarContainer.style.display = "none";
+// };
 
 const loader = new GLTFLoader(loadingManager);
 loader.load("./toy_rocket/scene.gltf", (gltf) => {
