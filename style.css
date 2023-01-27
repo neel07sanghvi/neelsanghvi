@@ -27,14 +27,14 @@
   src: url("Dune_Rise.otf");
 }
 
-html {
+/* html {
   height: -webkit-fill-available;
-}
+} */
 
 body {
   height: 200vh;
   width: 100vw;
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
 }
 
 #app {
