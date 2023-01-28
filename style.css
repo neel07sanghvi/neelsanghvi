@@ -19,6 +19,7 @@
   --containerColor: white;
   --profileHeight: 30px;
   --profileWidth: 30px;
+  --mobileProfileDimension: 25px;
   --profileBackgroundColor: rgba(255, 255, 255, 0.9);
 }
 
@@ -397,6 +398,22 @@ a {
 @media only screen and (max-width: 450px) {
   .textInfo {
     font-size: small;
+  }
+  .linkedIn {
+    height: var(--mobileProfileDimension);
+    width: var(--mobileProfileDimension);
+  }
+  .gitHub {
+    height: var(--mobileProfileDimension);
+    width: var(--mobileProfileDimension);
+  }
+  .codeChef {
+    height: var(--mobileProfileDimension);
+    width: var(--mobileProfileDimension);
+  }
+  .leetCode {
+    height: var(--mobileProfileDimension);
+    width: var(--mobileProfileDimension);
   }
 }
 
