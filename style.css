@@ -17,8 +17,7 @@
   --conatinerBorder: 2px solid rgb(255, 255, 255, 0.2);
   --borderRadius: 5px;
   --containerColor: white;
-  --profileHeight: 30px;
-  --profileWidth: 30px;
+  --profileDimesnion: 30px;
   --mobileProfileDimension: 25px;
   --profileBackgroundColor: rgba(255, 255, 255, 0.9);
 }
@@ -162,8 +161,8 @@ a {
 .linkedIn {
   background-color: var(--profileBackgroundColor);
   border-radius: 2px;
-  height: var(--profileHeight);
-  width: var(--profileWidth);
+  height: var(--profileDimesnion);
+  width: var(--profileDimesnion);
   cursor: pointer;
   overflow: hidden;
 }
@@ -178,8 +177,8 @@ a {
 .gitHub {
   background-color: var(--profileBackgroundColor);
   border-radius: 2px;
-  height: var(--profileHeight);
-  width: var(--profileWidth);
+  height: var(--profileDimesnion);
+  width: var(--profileDimesnion);
   cursor: pointer;
   overflow: hidden;
 }
@@ -194,8 +193,8 @@ a {
 .codeChef {
   background-color: var(--profileBackgroundColor);
   border-radius: 2px;
-  height: var(--profileHeight);
-  width: var(--profileWidth);
+  height: var(--profileDimesnion);
+  width: var(--profileDimesnion);
   cursor: pointer;
   overflow: hidden;
 }
@@ -210,8 +209,8 @@ a {
 .leetCode {
   background-color: var(--profileBackgroundColor);
   border-radius: 2px;
-  height: var(--profileHeight);
-  width: var(--profileWidth);
+  height: var(--profileDimesnion);
+  width: var(--profileDimesnion);
   cursor: pointer;
   overflow: hidden;
 }
