@@ -328,16 +328,30 @@ a {
 
 .email,
 .resume {
-  height: 20%;
-  padding: 5px;
+  /* height: 25%;
+  width: 30%; */
+  /* padding: 10px 40px; */
   overflow: hidden;
-  background-color: var(--profileBackgroundColor);
-  color: black;
+  /* background-color: var(--profileBackgroundColor); */
+  color: white;
+  /* border: var(--conatinerBorder); */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: var(--borderRadius);
   font-family: "Nunito";
+}
+
+.email :hover,
+.resume :hover {
+  background-color: var(--profileBackgroundColor);
+  color: black;
+}
+
+.line {
+  background-color: white;
+  height: 30%;
+  width: 1px;
 }
 
 @media only screen and (max-width: 1200px) {
